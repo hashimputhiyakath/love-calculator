@@ -24,11 +24,10 @@ body {
 
 .logo {
     width: 400px;
-    border: 1 pix solid red;
+    margin-top: 70px;
 }
 
 form {
-    border: 1 pix solid red;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
