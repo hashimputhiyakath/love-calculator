@@ -11,20 +11,39 @@
 <body>
     <div class="wrapper">
         <img class="logo" src="logo.png" alt="Love Calculator Logo" srcset="">
-        <form action="#" method="post">
+        <form id="form" action="#" method="post">
             <div class="form-group">
                 <label for="username">Your name</label>
-                <input type="text" name="username">
+                <input type="text" name="username" id="username">
+                <div class="feedback" id="username-feedback"></div>
             </div>
             <div class="form-group">
-                <label for="username">Lover's name</label>
-                <input type="text" name="username">
+                <label for="lovername">Lover's name</label>
+                <input type="text" name="lovername" id="lover-name">
+                <div class="feedback" id="lover-name-feedback"></div>
             </div>
-            <button type="submit" id="calculate-btn">Calculate</button>
-
+            <button type="submit" id="calculate-btn">Calculate <span>&hearts;</span></button>
         </form>
     </div>
 
+    <div class="popup-window" id="popup-window">
+        <div class="popup-wrapper">
+            <img class="popup-logo" src="logo2.png" alt="">
+            <div class="box">
+                <div class="progress" id="progress">
+
+                </div>
+            </div> <!-- box -->
+            <h3>Congratulations!</h3>
+            <div class="message" id="message"></div>
+            <div class="smiley" id="smiley">
+
+            </div>
+            <span class="close" id="close">X</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="app.js"></script>
 </body>
 

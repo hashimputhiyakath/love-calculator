@@ -12,17 +12,23 @@ body {
     min-height: 100%;
     background: rgb(199, 6, 85);
     background: radial-gradient(circle, rgba(199, 6, 85, 1) 0%, rgba(112, 13, 35, 1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
     width: 400px;
+    border: 1 pix solid red;
 }
 
 form {
+    border: 1 pix solid red;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -48,10 +54,17 @@ label {
     font-size: 18px;
     padding: 5px 20px;
     background-color: rgba(255, 255, 255, 0.92);
-    color: rgba(255, 255, 255, 0.961);
+    color: rgba(65, 65, 65, 0.961);
     width: 300px;
     max-width: 300px;
     align-self: center;
+    margin-bottom: 10px;
+}
+
+.feedback {
+    color: rgba(255, 255, 255, 0.803);
+    font-size: 14px;
+
 }
 
 button[type="submit"] {
@@ -64,4 +77,112 @@ button[type="submit"] {
     border-radius: 20px;
     align-self: center;
     cursor: pointer;
+}
+
+button[type="submit"] span {
+    color: rgb(199, 6, 85);
+    font-size: 1.1rem;
+}
+
+
+.popup-window {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.popup-window.open {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-wrapper {
+    background-color: white;
+    width: 500px;
+    max-width: 96%;
+    min-height: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.345);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.popup-wrapper .popup-logo {
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.popup-wrapper .box {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 170px;
+    height: 170px;
+}
+
+.popup-wrapper .progress {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.popup-wrapper .progress>.inner {
+    position: absolute;
+    color: red;
+}
+
+.popup-wrapper .progress>svg {
+    height: 100%;
+    display: block;
+}
+
+.popup-wrapper.progress {
+    padding: 10px;
+    width: 320px;
+    height: 320px;
+}
+
+.popup-wrapper h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: rgb(199, 6, 85);
+}
+
+.popup-wrapper .message {
+    font-size: 1.2rem;
+}
+
+.popup-wrapper .smiley img {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+}
+
+.popup-wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(0, 0, 0, 0.208);
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.popup-wrapper .close:hover {
+    color: rgba(145, 17, 47, 0.824);
 }
